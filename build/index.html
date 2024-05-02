@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="tr" class="sm:scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Bull App</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+
+    <script>
+      document.documentElement.className = "js";
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement("style");
+        return (
+          (t.innerHTML = "root: { --tmp-var: bold; }"),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports("font-weight", "var(--tmp-var)")
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+      supportsCssVars() ||
+        alert(
+          "Please view this in a modern browser that supports CSS Variables."
+        );
+    </script>
+    <script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
+  </head>
+  <body class="min-h-screen bg-white text-black">
+    <header class="bg-zinc-900 text-white sticky top-0 z-10">
+      <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+        <h1 class="text-3xl font-medium">
+          <a href="#Anasayfa"
+            ><img
+              src="./images/redbullcom-logo_double-with-text.svg"
+              alt="Red Bull Logo"
+          /></a>
+        </h1>
+        <div>
+          <button
+            id="hamburger-button"
+            class="text-3xl md:hidden cursor-pointer h-8 w-8 relative"
+          >
+            <div
+              class="-mt-0.5 absolute top-4 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']"
+            ></div>
+          </button>
+          <nav class="hidden md:block space-x-8 text-xl" aria-label="main">
+            <a href="#Ürün" class="hover:opacity-70">Ürün</a>
+            <a href="#Sporcular" class="hover:opacity-70">Sporcular</a>
+            <a href="#Uygulama" class="hover:opacity-70">Uygulama</a>
+          </nav>
+        </div>
+      </section>
+
+      <section
+        id="mobile-menu"
+        class="absolute top-68 bg-black w-full text-5xl flex-col justify-center origin-top animate-open-menu hidden"
+      >
+        <nav
+          class="flex flex-col min-h-screen items-center py-8"
+          aria-label="mobile"
+        >
+          <a href="#Anasayfa" class="w-full text-center py-6 hover:opacity-70"
+            >Ana Sayfa</a
+          >
+          <a href="#Ürün" class="w-full text-center py-6 hover:opacity-70"
+            >Ürün</a
+          >
+          <a href="#Sporcular" class="w-full text-center py-6 hover:opacity-70"
+            >Sporcular</a
+          >
+          <a href="#Uygulama" class="w-full text-center py-6 hover:opacity-70"
+            >Uygulama</a
+          >
+          <a href="#İletişim" class="w-full text-center py-6 hover:opacity-70"
+            >İletişim</a
+          >
+        </nav>
+      </section>
+    </header>
+    <main class="max-w-4xl mx-auto">
+      <section
+        id="Anasayfa"
+        class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height"
+      >
+        <article class="sm:w-1/2">
+          <h2
+            class="max-w-4xl text-4xl font-bold text-center sm:text-4xl sm:text-left text-slate-900"
+          >
+            Yeni Enerji Dalgası:
+            <span class="text-red-600"> Redbull E-Ticaret Uygulamasıyla </span>
+            Hızlı ve Heyecanlı Alışveriş Deneyimi!
+          </h2>
+          <p
+            class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-400"
+          >
+            Yüksek enerji, sınırsız tutku ve adrenalin dolu anlar... İşte
+            Redbull'un DNA'sında bulunan bu özü, şimdi bir tık uzağınızda!
+          </p>
+          <p
+            class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-400"
+          ></p>
+        </article>
+        <img
+          class="w-1/2 rounded-lg shadow-lg shadow-red-500/60"
+          src="./images/redbullappconcept2.jpeg"
+          alt="Red Bull App Concept"
+        />
+      </section>
+
+      <hr class="mx-auto bg-black h-0.5 rounded-xl w-1/2" />
+
+      <section
+        id="Ürün"
+        class="p-6 my-12 flex flex-col scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
+      >
+        <h2
+          class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900"
+        >
+          <span class="text-yellow-500">Red Bull App</span> Şimdi Cebinizde!
+        </h2>
+        <ul
+          class="list-none mx-auto my-12 flex flex-col sm:flex-row items-center gap-8"
+        >
+          <li
+            class="w-2/3 sm:w-5/6 flex flex-col gap-2 items-center border-slate-900 bg-white py-6 px-2 rounded-3xl shadow-xl shadow-blue-950/55 hover:scale-110 hover:ease-out duration-300"
+          >
+            <img
+              src="./images/redbullappproducts.jpeg"
+              alt="Product"
+              class="rounded-xl"
+            />
+            <h3
+              class="text-2xl font-semibold italic text-center text-slate-900"
+            >
+              Ürünleri Görüntüle
+            </h3>
+          </li>
+          <li
+            class="w-2/3 sm:w-5/6 flex flex-col gap-2 items-center border-slate-900 bg-white py-6 px-2 rounded-3xl shadow-xl shadow-blue-950/55 hover:scale-110 hover:ease-out duration-300"
+          >
+            <img
+              src="./images/redbullappproducts3.jpeg"
+              alt="Product"
+              class="rounded-xl"
+            />
+            <h3
+              class="text-2xl text-center text-slate-900 font-semibold italic"
+            >
+              Satın Al
+            </h3>
+          </li>
+          <li
+            class="w-2/3 sm:w-5/6 flex flex-col gap-2 items-center border-slate-900 bg-white py-6 px-2 rounded-3xl shadow-xl shadow-blue-950/55 hover:scale-110 hover:ease-out duration-300"
+          >
+            <img
+              src="./images/redbullappproducts2.jpeg"
+              alt="Product"
+              class="rounded-xl"
+            />
+            <h3
+              class="text-2xl text-center text-slate-900 font-semibold italic"
+            >
+              Evine Gelsin
+            </h3>
+          </li>
+        </ul>
+        <p
+          class="max-w-2xl text-xl sm:max-w-4xl sm:text-2xl mt-4 text-center sm:text-left text-slate-500"
+        >
+          Redbull'un e-ticaret platformu, size sadece standart içecekleri
+          sunmakla kalmıyor, aynı zamanda sınırsız çeşitlilikte ürün ve
+          yeniliklerle dolu bir dünyaya kapı aralıyor. Klasik Redbull mu
+          arıyorsunuz? Yoksa yeni ve heyecan verici bir tat mı denemek
+          istiyorsunuz? Redbull'un e-ticaret uygulaması, her zevke ve ihtiyaca
+          hitap eden bir içecek yelpazesi sunuyor.
+        </p>
+      </section>
+
+      <hr class="mx-auto bg-black h-0.5 rounded-xl w-1/2" />
+
+      <section
+        id="Sporcular"
+        class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
+      >
+        <div class="flex flex-col gap-7 m-auto">
+          <h2
+            class="max-w-4xl text-4xl font-bold text-center sm:text-4xl sm:text-left text-slate-900"
+          >
+            <span class="text-blue-900"> Red Bull App </span> ile Sporun Yeni
+            Yüzüne Hoş Geldiniz!
+          </h2>
+
+          <div
+            id="content"
+            class="content h-96 w-full m-auto overflow-hidden relative rounded-xl"
+          >
+            <div
+              class="slider"
+              id="slider"
+              data-images='["./images/hande.jpg","./images/kübra.jpeg","./images/ayhancan-guven.jpg"]'
+            ></div>
+          </div>
+          <span class="m-auto -mt-6 text-gray-500 font-light"
+            >'Resmin değiştirilmesi için resme tıklayınız'</span
+          >
+          <p
+            class="max-w-2xl text-xl sm:max-w-4xl sm:text-2xl mt-4 text-center sm:text-left text-slate-500"
+          >
+            Spor tutkunları, macera arayanlar ve adrenalin meraklıları! Red Bull
+            uygulaması, atletizmi ve spor dünyasını yeni bir boyuta taşıyor. Bu
+            uygulama, dünya çapındaki profesyonel sporcuların heyecan verici
+            hayatlarına pencereler açıyor ve onların gözünden dünyayı görmemizi
+            sağlıyor.
+          </p>
+          <p
+            class="max-w-2xl text-xl sm:max-w-4xl sm:text-2xl mt-4 text-center sm:text-left text-slate-500"
+          >
+            Bu uygulama, sıradan insanların olağanüstü spor başarılarına tanık
+            olmalarını sağlayarak, herkes için bir ilham kaynağı olmayı
+            hedefliyor. Örneğin, profesyonel kayakçılar, BMX sürücüleri, serbest
+            dalışçılar ve daha pek çok sporcuyla yapılan derinlemesine
+            söyleşiler, sizi de bu zorlu sporlara teşvik edebilir.
+          </p>
+        </div>
+      </section>
+
+      <hr class="mx-auto bg-black h-0.5 rounded-xl w-1/2" />
+
+      <section
+        id="Uygulama"
+        class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
+      >
+        <h2
+          class="max-w-4xl text-4xl font-bold text-center sm:text-4xl text-slate-900 mb-5"
+        >
+          App Şuan Yayında!
+        </h2>
+
+        <div class="max-w-2xl flex flex-col gap-5 m-auto">
+          <div class="w-2/3 m-auto shadow-xl shadow-red-600/55 rounded-3xl">
+            <img
+              src="./images/redbullappconcept.jpg"
+              class="rounded-3xl"
+              alt=""
+            />
+          </div>
+          <div>
+            <p
+              class="max-w-2xl text-xl sm:max-w-4xl sm:text-2xl mt-4 text-center sm:text-left text-slate-500"
+            >
+              Yenilikçi ve dinamik bir yaklaşımla Redbull'un enerji dolu
+              dünyasını size taşıyan e-ticaret uygulamamızla, en sevdiğiniz
+              enerji içeceğine kolayca erişebilir, özel kampanyalar ve avantajlı
+              fırsatlarla dolu dünyasında kendinizi bulabilirsiniz. Redbull'un
+              gücüyle her anınıza enerji katın, şimdi uygulamamızı indirin ve
+              yaşamınıza heyecan katın!
+            </p>
+            <p
+              class="max-w-2xl text-xl sm:max-w-4xl sm:text-2xl font-medium mt-4 text-center sm:text-left text-slate-500"
+            >
+              <span class="text-red-600"> Red Bull App </span> tüm online
+              marketlerde...
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div class="w-1/2 m-auto">
+              <a
+                href="https://play.google.com/store/games?hl=tr&gl=US&pli=1"
+                target="_blank"
+              >
+                <img src="./images/googleplay.jpg" class="rounded-xl" alt="" />
+              </a>
+            </div>
+            <div class="w-1/2 m-auto">
+              <a href="https://www.apple.com/tr/app-store/" target="_blank">
+                <img src="./images/appstore.jpg" class="rounded-xl" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="İletişim" class="bg-zinc-900 text-white text-xl">
+      <section
+        class="max-w-4xl scroll-mt-20 mx-auto p-4 flex flex-col sm:flex-row sm:justify-between"
+      >
+        <div class="flex flex-col gap-3">
+          <a
+            href="https://tr-tr.facebook.com/RedBull"
+            class="flex flex-row gap-1"
+            target="_blank"
+            ><img
+              src="./images/facebook.jpg"
+              width="25"
+              height="25"
+              alt="Facebook Page"
+              class="rounded-full"
+            />
+            <span>Facebook</span></a
+          >
+          <a
+            href="https://www.instagram.com/redbulltr/"
+            target="_blank"
+            class="flex flex-row gap-1"
+            ><img
+              src="./images/insta.jpg"
+              width="25"
+              height="50"
+              alt="Instagram Page"
+              class="rounded-full"
+            />
+            <span>Instagram</span>
+          </a>
+          <a
+            href="https://twitter.com/RedBullTR"
+            target="_blank"
+            class="flex flex-row gap-1"
+            ><img
+              src="./images/x.jpg"
+              width="25"
+              height="25"
+              alt="Twitter Page"
+              class="rounded-full"
+            />
+            <span>Twitter</span></a
+          >
+          <a
+            href="https://www.tiktok.com/@redbulltr"
+            class="flex flex-row gap-1"
+            target="_blank"
+            ><img
+              src="./images/tiktok.jpg"
+              width="25"
+              height="25"
+              alt="Tiktok Page"
+              class="rounded-full"
+            />
+            <span class="">Tiktok</span>
+          </a>
+        </div>
+        <nav class="hidden md:flex flex-col gap-2" aria-label="footer">
+          <a href="#Anasayfa" class="hover:opacity-70">Anasayfa</a>
+          <a href="#Ürün" class="hover:opacity-70">Ürün</a>
+          <a href="#Sporcular" class="hover:opacity-70">Sporcular</a>
+          <a href="#Uygulama" class="hover:opacity-70">Uygulama</a>
+        </nav>
+        <div class="">
+          <p class="text-right">Talentia &copy; <span id="year">2024</span></p>
+          <p class="text-right">LimLim</p>
+        </div>
+      </section>
+    </footer>
+
+    <script src="js/three.js"></script>
+    <script src="js/dat-gui.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/sketch.js"></script>
+    <script src="js/demo5.js"></script>
+    <script src="https://tympanus.net/codrops/adpacks/demoad.js"></script>
+  </body>
+</html>
